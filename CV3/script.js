@@ -20,7 +20,7 @@ const CV_DATA = {
   ],
   competences: [
     { categorie: "Outils &amp; Logiciels", tags: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Adobe Premiere Pro", "Adobe After Effects", "Clip Studio Paint", "Canva", "WordPress", "VSCode", "GitHub", "Filezilla", "Laragon", "Trello", "ClickUp", "Outils IA"] },
-    { categorie: "Langages de programmation", items: [{ nom: "PHP", niveau: 18 }, { nom: "SQL", niveau: 45 }, { nom: "HTML", niveau: 90 }, { nom: "CSS", niveau: 85 }, { nom: "JavaScript", niveau: 50 }] },
+    { categorie: "Langages de programmation", items: [{ nom: "HTML", niveau: 90 }, { nom: "CSS", niveau: 85 }, { nom: "JavaScript", niveau: 50 }, { nom: "SQL", niveau: 45 }, { nom: "PHP", niveau: 18 }] },
     { categorie: "Design &amp; UX", tags: ["Design UI/UX", "Wireframes et Prototypes", "Direction artistique", "Conception de logos", "Design Print"] },
     { categorie: "Illustration &amp; Dessin", tags: ["Dessin graphique digital", "Dessin sur papier", "Illustration"] },
     { categorie: "Conception Web &amp; Webdesign", tags: ["Webdesign", "Architecture web", "Responsive design", "UX web", "Interface web", "Composition web", "Accessibilité web", "Performance web"] },
