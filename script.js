@@ -87,6 +87,9 @@ const CV_DATA = {
       items: [
         { nom: "PHP", niveau: 18 },
         { nom: "SQL", niveau: 45 },
+        { nom: "HTML", niveau: 90 },
+        { nom: "CSS", niveau: 85 },
+        { nom: "JavaScript", niveau: 50 },
       ],
     },
     {
