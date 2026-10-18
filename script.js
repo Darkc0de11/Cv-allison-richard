@@ -20,7 +20,7 @@ const CV_DATA = {
     {
       poste: "Bénévole",
       entreprise: "Commerce Équitable de Jussey",
-      periode: "Novembre 2025",
+      periode: "novembre 2025",
       points: [
         "Gestion du stock et organisation de l'inventaire",
         "Gestion de la caisse et encaissement des clients",
@@ -32,17 +32,17 @@ const CV_DATA = {
     {
       poste: "Agent recenseur",
       entreprise: "Commune",
-      periode: "Janvier — Février 2022",
+      periode: "janvier — février 2022",
       points: [
         "Participation au recensement de la population",
-        "Collecte de données et informations auprès des habitants",
+        "Collecte de données et d'informations auprès des habitants",
         "Saisie et organisation des données de recensement",
       ],
     },
     {
       poste: "Design UX/UI / Graphiste (Stage à distance)",
       entreprise: "INNOVQUBE",
-      periode: "2025 — Aujourd'hui",
+      periode: "2025 — aujourd'hui",
       outils: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
       points: [
         "Création de wireframes et prototypes interactifs sur Figma",
@@ -202,7 +202,7 @@ const CV_DATA = {
       titre: "Brevet des collèges",
       organisme: "Collège Louis Pasteur, Jussey",
       periode: "2015",
-      detail: "Diplôme national d'études.",
+      detail: "Diplôme national du brevet.",
     },
   ],
 
@@ -210,20 +210,20 @@ const CV_DATA = {
     {
       diplome: "Graphiste Print Digital",
       ecole: "SKILL AND YOU",
-      periode: "2025 — En cours",
+      periode: "2025 — en cours",
       detail: "Formation spécialisée en design print et digital.",
     },
     {
       diplome: "Entreprendre 4.0",
       ecole: "BGE",
-      periode: "Janvier 2026 — Mars 2026",
-      detail: "Formation complémentaire à l'entrepreneuriat et transformation digitale.",
+      periode: "janvier 2026 — mars 2026",
+      detail: "Formation complémentaire à l'entrepreneuriat et à la transformation digitale.",
     },
     {
       diplome: "Demain de créer",
       ecole: "BGE",
-      periode: "Novembre 2025 — Décembre 2025",
-      detail: "Formation entrepreneuriat et création d'entreprise.",
+      periode: "novembre 2025 — décembre 2025",
+      detail: "Formation à l'entrepreneuriat et à la création d'entreprise.",
     },
     {
       diplome: "Concepteur designer UI",
@@ -235,7 +235,7 @@ const CV_DATA = {
       diplome: "Baccalauréat STI2D (SIN)",
       ecole: "Lycée Édouard Belin, Vesoul",
       periode: "2016 — 2019",
-      detail: "Baccalauréat général et technologique, filière Système Informatique et Numérique.",
+      detail: "Baccalauréat technologique, spécialité systèmes d'information et numérique.",
     },
     {
       diplome: "Formation agent recenseur",
