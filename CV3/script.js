@@ -12,7 +12,7 @@ const CV_DATA = {
   },
 
   apropos: {
-    texte: "Graphiste dynamique, je mets ma créativité et mon sens du détail au service de projets digitaux innovants, en alliant esthétique et performance. Spécialisée en design UI/UX, conception graphique et gestion web, je crée des identités visuelles cohérentes et des interfaces intuitives qui transforment les visions en réalités.",
+    texte: "Webdesigner et Graphiste Digital dynamique, je mets ma créativité et mon sens du détail au service de projets digitaux innovants, en alliant esthétique et performance. Spécialisée en design UI/UX, conception graphique et gestion web, je crée des identités visuelles cohérentes et des interfaces intuitives qui transforment les visions en réalités.",
     tags: ["UI/UX Design", "Graphisme Print", "Identité visuelle", "Webdesign", "Design Digital"],
   },
 
@@ -94,64 +94,23 @@ const CV_DATA = {
     },
     {
       categorie: "Design &amp; UX",
-      items: [
-        { nom: "Design UI/UX", niveau: 85 },
-        { nom: "Wireframes et Prototypes", niveau: 83 },
-        { nom: "Direction artistique", niveau: 80 },
-        { nom: "Conception de logos", niveau: 87 },
-        { nom: "Design Print", niveau: 90 },
-      ],
+      tags: ["Design UI/UX", "Wireframes et Prototypes", "Direction artistique", "Conception de logos", "Design Print"],
     },
     {
       categorie: "Illustration &amp; Dessin",
-      items: [
-        { nom: "Dessin graphique digital", niveau: 82 },
-        { nom: "Dessin sur papier", niveau: 85 },
-        { nom: "Illustration", niveau: 83 },
-      ],
+      tags: ["Dessin graphique digital", "Dessin sur papier", "Illustration"],
     },
     {
       categorie: "Conception Web &amp; Webdesign",
-      items: [
-        { nom: "Webdesign", niveau: 82 },
-        { nom: "Architecture web", niveau: 78 },
-        { nom: "Responsive design", niveau: 85 },
-        { nom: "UX web", niveau: 82 },
-        { nom: "Interface web", niveau: 84 },
-        { nom: "Composition web", niveau: 80 },
-        { nom: "Accessibilité web", niveau: 75 },
-        { nom: "Performance web", niveau: 72 },
-      ],
+      tags: ["Webdesign", "Architecture web", "Responsive design", "UX web", "Interface web", "Composition web", "Accessibilité web", "Performance web"],
     },
     {
       categorie: "Webmaster",
-      items: [
-        { nom: "Gestion de contenu", niveau: 80 },
-        { nom: "Maintenance web", niveau: 78 },
-        { nom: "SEO basics", niveau: 70 },
-        { nom: "Optimisation web", niveau: 75 },
-        { nom: "Gestion CMS", niveau: 80 },
-      ],
+      tags: ["Gestion de contenu", "Maintenance web", "SEO basics", "Optimisation web", "Gestion CMS"],
     },
     {
       categorie: "Compétences professionnelles",
-      items: [
-        { nom: "Chartes graphiques", niveau: 85 },
-        { nom: "Guidelines UI", niveau: 82 },
-        { nom: "Gestion web &amp; CMS", niveau: 70 },
-        { nom: "Intégration de contenus", niveau: 76 },
-        { nom: "Moodboards &amp; concepts créatifs", niveau: 86 },
-        { nom: "Entrepreneuriat", niveau: 78 },
-        { nom: "Création d'entreprise", niveau: 76 },
-        { nom: "Business plan", niveau: 75 },
-        { nom: "Transformation digitale", niveau: 74 },
-        { nom: "Stratégie digitale", niveau: 72 },
-        { nom: "Marketing digital", niveau: 70 },
-        { nom: "E-commerce", niveau: 68 },
-        { nom: "Prototypage &amp; wireframing", niveau: 83 },
-        { nom: "Design system", niveau: 80 },
-        { nom: "User research", niveau: 78 },
-      ],
+      tags: ["Chartes graphiques", "Guidelines UI", "Gestion web &amp; CMS", "Intégration de contenus", "Moodboards &amp; concepts créatifs", "Entrepreneuriat", "Création d'entreprise", "Business plan", "Transformation digitale", "Stratégie digitale", "Marketing digital", "E-commerce", "Prototypage &amp; wireframing", "Design system", "User research"],
     },
     {
       categorie: "Savoir-faire",
@@ -309,7 +268,42 @@ function renderHero() {
   hero.innerHTML = `
     ${corners()}
     <div class="avatar-frame">
-      <div class="avatar-ring"></div>
+      <svg class="avatar-ring" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <filter id="stroke-glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feFlood flood-color="#FF5FA8" flood-opacity="0.8" result="glowColor"/>
+            <feComposite in="glowColor" in2="coloredBlur" operator="in" result="softGlow"/>
+            <feMerge>
+              <feMergeNode in="softGlow"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <g transform="translate(60, 60)">
+          <!-- Pétale 1 (Top) - Contours vectorisés -->
+          <path d="M -8 -50 Q -14 -48 -18 -38 Q -20 -26 -18 -12 Q -15 0 -6 6 Q 0 8 6 6 Q 15 0 18 -12 Q 20 -26 18 -38 Q 14 -48 8 -50 Q 4 -48 0 -52 Q -4 -48 -8 -50"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" filter="url(#stroke-glow)" />
+          <!-- Pétale 2 (Top-Right @ 72°) -->
+          <path d="M -8 -50 Q -14 -48 -18 -38 Q -20 -26 -18 -12 Q -15 0 -6 6 Q 0 8 6 6 Q 15 0 18 -12 Q 20 -26 18 -38 Q 14 -48 8 -50 Q 4 -48 0 -52 Q -4 -48 -8 -50"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" filter="url(#stroke-glow)" transform="rotate(72)" />
+          <!-- Pétale 3 (Right @ 144°) -->
+          <path d="M -8 -50 Q -14 -48 -18 -38 Q -20 -26 -18 -12 Q -15 0 -6 6 Q 0 8 6 6 Q 15 0 18 -12 Q 20 -26 18 -38 Q 14 -48 8 -50 Q 4 -48 0 -52 Q -4 -48 -8 -50"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" filter="url(#stroke-glow)" transform="rotate(144)" />
+          <!-- Pétale 4 (Bottom-Right @ 216°) -->
+          <path d="M -8 -50 Q -14 -48 -18 -38 Q -20 -26 -18 -12 Q -15 0 -6 6 Q 0 8 6 6 Q 15 0 18 -12 Q 20 -26 18 -38 Q 14 -48 8 -50 Q 4 -48 0 -52 Q -4 -48 -8 -50"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" filter="url(#stroke-glow)" transform="rotate(216)" />
+          <!-- Pétale 5 (Bottom-Left @ 288°) -->
+          <path d="M -8 -50 Q -14 -48 -18 -38 Q -20 -26 -18 -12 Q -15 0 -6 6 Q 0 8 6 6 Q 15 0 18 -12 Q 20 -26 18 -38 Q 14 -48 8 -50 Q 4 -48 0 -52 Q -4 -48 -8 -50"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" filter="url(#stroke-glow)" transform="rotate(288)" />
+          <!-- Centre avec traits -->
+          <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7" filter="url(#stroke-glow)" />
+          <!-- Détails centre - petites lignes -->
+          <line x1="0" y1="-8" x2="0" y2="-4" stroke="currentColor" stroke-width="1" opacity="0.6" filter="url(#stroke-glow)" />
+          <line x1="-6" y1="-1" x2="-3" y2="2" stroke="currentColor" stroke-width="1" opacity="0.6" filter="url(#stroke-glow)" />
+          <line x1="6" y1="-1" x2="3" y2="2" stroke="currentColor" stroke-width="1" opacity="0.6" filter="url(#stroke-glow)" />
+        </g>
+      </svg>
       <img src="avatar.jpg" alt="${d.prenomNom}" class="avatar" />
     </div>
     <div>
@@ -328,7 +322,7 @@ function renderHero() {
 }
 
 function renderApropos() {
-  document.getElementById("apropos-title").textContent = CV_DATA.identite.prenomNom.split(" ")[0] + ", en quelques mots";
+  document.getElementById("apropos-title").textContent = "Moi, en quelques mots";
   const card = document.querySelector(".about-card");
   card.innerHTML = `
     ${corners()}
@@ -427,7 +421,7 @@ function renderInterets() {
 
 function renderContact() {
   document.getElementById("contact-title").textContent = "Contactez-moi";
-  document.getElementById("contact-sub").textContent = CV_DATA.contact.texte;
+  document.getElementById("contact-sub").innerHTML = "Vous cherchez un graphiste ou web designer pour votre projet ?<br>N'hésitez pas à me contacter pour discuter de vos besoins.";
   const grid = document.getElementById("contact-grid");
   grid.innerHTML = CV_DATA.contact.liens.map(l => `
     <a class="contact-pill" href="${l.url}" target="${l.url.startsWith('http') ? '_blank' : '_self'}" rel="noopener">
@@ -492,6 +486,20 @@ const scrollTopBtn = document.getElementById("scrollTopBtn");
 window.addEventListener("scroll", () => {
   scrollTopBtn.classList.toggle("visible", window.scrollY > window.innerHeight * 0.6);
 }, { passive: true });
+
+/* ---------- Menu burger responsive ---------- */
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+navMenu.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+});
 
 /* ---------- Motes ambiantes (canvas) ---------- */
 (function motes() {
