@@ -40,13 +40,18 @@
 </div>
 
 <div class="topbar glass">
-  <nav aria-label="Navigation du CV">
+  <button class="menu-burger" id="menuToggle" aria-label="Menu de navigation" title="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav-menu" id="navMenu" aria-label="Navigation du CV">
     <a href="#accueil">Accueil</a>
     <a href="#apropos">Profil</a>
     <a href="#experience">Expérience</a>
-    <a href="#competences">Compétences</a>
-    <a href="#diplomes">Diplômes</a>
     <a href="#formation">Formation</a>
+    <a href="#diplomes">Diplômes</a>
+    <a href="#competences">Compétences</a>
     <a href="#interets">Centres d’intérêt</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -77,10 +82,13 @@
     <div class="timeline" id="experience-list"></div>
   </section>
 
-  <section id="competences">
-    <p class="eyebrow">Savoir-faire</p>
-    <h2 class="section-title">Compétences</h2>
-    <div class="skills-grid" id="skills-grid"></div>
+  <section id="formation">
+    <p class="eyebrow">Cursus</p>
+    <h2 class="section-title">Formation &amp; langues</h2>
+    <div class="twocol">
+      <div id="education-list"></div>
+      <div class="lang-card glass panel" data-reveal id="lang-list"></div>
+    </div>
   </section>
 
   <section id="diplomes">
@@ -89,13 +97,10 @@
     <div id="diplomes-list"></div>
   </section>
 
-  <section id="formation">
-    <p class="eyebrow">Cursus</p>
-    <h2 class="section-title">Formation &amp; langues</h2>
-    <div class="twocol">
-      <div id="education-list"></div>
-      <div class="lang-card glass panel" data-reveal id="lang-list"></div>
-    </div>
+  <section id="competences">
+    <p class="eyebrow">Savoir-faire</p>
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-grid" id="skills-grid"></div>
   </section>
 
   <section id="interets">
