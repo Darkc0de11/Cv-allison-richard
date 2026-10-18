@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV — Webdesigner &amp; Graphiste</title>
+<link rel="stylesheet" href="style.css" />
+
+<!--
+  ============================================================
+  COMMENT MODIFIER CE CV
+  ============================================================
+  Le contenu (nom, titre, expériences, compétences, etc.) se
+  trouve dans script.js, tout en haut, dans l'objet CV_DATA.
+  Il suffit de remplacer le texte entre guillemets " ".
+  Ce fichier index.html ne contient que la structure ;
+  les styles sont dans style.css et le comportement dans script.js.
+  ============================================================
+-->
+</head>
+<body>
+
+<!-- Motif d'ornement de coin, réutilisé sur chaque panneau -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="flourish" viewBox="0 0 40 40">
+      <path d="M3 16 C3 7 7 3 16 3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+      <path d="M3 23 C3 31 4 35 10 37" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"></path>
+      <circle cx="16" cy="3" r="1.6" fill="currentColor"></circle>
+      <circle cx="3" cy="16" r="1.6" fill="currentColor"></circle>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="bg-scene" aria-hidden="true">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <canvas id="motes"></canvas>
+</div>
+
+<div class="topbar glass">
+  <nav aria-label="Navigation du CV">
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">Profil</a>
+    <a href="#experience">Expérience</a>
+    <a href="#competences">Compétences</a>
+    <a href="#diplomes">Diplômes</a>
+    <a href="#formation">Formation</a>
+    <a href="#interets">Centres d’intérêt</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="tools">
+    <button class="icon-btn" id="printBtn" type="button" aria-label="Imprimer / exporter en PDF" title="Imprimer / PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+    </button>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Changer de thème" title="Thème clair / sombre">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+  </div>
+</div>
+
+<main>
+  <section id="accueil">
+    <div class="hero glass panel" data-reveal></div>
+  </section>
+
+  <section id="apropos">
+    <p class="eyebrow">Profil</p>
+    <h2 class="section-title" id="apropos-title"></h2>
+    <div class="about-card glass panel" data-reveal></div>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow">Parcours</p>
+    <h2 class="section-title">Expérience</h2>
+    <div class="timeline" id="experience-list"></div>
+  </section>
+
+  <section id="competences">
+    <p class="eyebrow">Savoir-faire</p>
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-grid" id="skills-grid"></div>
+  </section>
+
+  <section id="diplomes">
+    <p class="eyebrow">Diplômes</p>
+    <h2 class="section-title">Diplômes &amp; Certifications</h2>
+    <div id="diplomes-list"></div>
+  </section>
+
+  <section id="formation">
+    <p class="eyebrow">Cursus</p>
+    <h2 class="section-title">Formation &amp; langues</h2>
+    <div class="twocol">
+      <div id="education-list"></div>
+      <div class="lang-card glass panel" data-reveal id="lang-list"></div>
+    </div>
+  </section>
+
+  <section id="interets">
+    <p class="eyebrow">Passions</p>
+    <h2 class="section-title">Centres d'intérêt</h2>
+    <div class="interets-grid" id="interets-list"></div>
+  </section>
+
+  <section id="contact">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title" id="contact-title"></h2>
+    <div class="contact-card glass panel" data-reveal>
+      <p id="contact-sub"></p>
+      <div class="contact-grid" id="contact-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer-text"></footer>
+
+<a href="#accueil" id="scrollTopBtn" class="scroll-top glass" aria-label="Retour en haut de page" title="Retour en haut">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
